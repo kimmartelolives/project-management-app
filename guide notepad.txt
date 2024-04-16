@@ -1,0 +1,42 @@
+composer create-project laravel/laravel project-management-app
+composer require laravel/breeze --dev
+php artisan breeze:install
+> react
+> dark
+> 
+
+php artisan tinker
+
+npm install @heroicons/react -S
+
+.editorconfig (file):
+[*.{js,jsx}]
+indent_size = 2
+
+Artisan Command:
+*Database creation*
+
+-fm = factory and migration
+php artisan make:model Project -fm
+php artisan make:model Task -fm
+
+php artisan migrate --seed
+php artisan migrate:refresh --seed (re apply)
+
+php artisan make:controller ProjectController --model=Project --requests --resource
+php artisan make:controller TaskController --model=Task --requests --resource
+php artisan make:controller UserController --model=User --requests --resource
+
+php artisan make:resource ProjectResource
+php artisan make:resource TaskResource
+php artisan make:resource UserResource
+
+php artisan route:list
+
+Tinker Command:
+php artisan tinker
+(Check how many objects inside of database)
+\App\Models\Project::count()
+\App\Models\Task::count()
+\App\Models\Task::query()->paginate(5)
+\App\Models\Task::query()->paginate(5)->all()
