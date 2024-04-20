@@ -40,3 +40,8 @@ php artisan tinker
 \App\Models\Task::count()
 \App\Models\Task::query()->paginate(5)
 \App\Models\Task::query()->paginate(5)->all()
+
+
+Pang check:
+<pre>{JSON.stringify(user, undefined, 2)}</pre>
+dd($data);
