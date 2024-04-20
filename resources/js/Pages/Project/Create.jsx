@@ -9,11 +9,11 @@ import { Head, Link, useForm } from "@inertiajs/react";
 export default function Create({ auth }) {
 
   const {data, setData, post, errors, reset} = useForm({
-    image: '',
-    name: '',
-    status: '',
-    description: '',
-    due_date: ''
+    image: "",
+    name: "",
+    status: "",
+    description: "",
+    due_date: ""
   })
 
   const onSubmit = (e) => {
