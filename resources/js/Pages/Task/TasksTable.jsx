@@ -86,6 +86,7 @@ export default function TasksTable({ tasks, success, queryParams = null, hidePro
           Due Date
           </TableHeading>
           <th className="px-3 py-3">Created By</th>
+          <th className="px-3 py-3">Assigned To</th>
           <th className="px-3 py-3 text-right">Actions</th>
         </tr>
       </thead>
@@ -121,6 +122,7 @@ export default function TasksTable({ tasks, success, queryParams = null, hidePro
               <option value="completed">Completed</option>
             </SelectInput>
           </th>
+          <th className="px-3 py-3"></th>
           <th className="px-3 py-3"></th>
           <th className="px-3 py-3"></th>
           <th className="px-3 py-3"></th>
@@ -175,6 +177,10 @@ export default function TasksTable({ tasks, success, queryParams = null, hidePro
 
           <td className="px-3 py-2">
             {task.createdBy.name}
+          </td>
+
+          <td className="px-3 py-2">
+          {task.assignedUser.name}
           </td>
 
           <td className="px-3 py-2 text-nowrap">
