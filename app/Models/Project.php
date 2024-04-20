@@ -23,6 +23,6 @@ class Project extends Model
 
     public function updatedBy()
     {
-        return $this->belongsTo(User::class, 'created_by');
+        return $this->belongsTo(User::class, 'updated_by');
     }
 }

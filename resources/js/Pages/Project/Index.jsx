@@ -97,7 +97,7 @@ export default  function Index({auth, projects, queryParams = null, success}) {
                       <th className="px-3 py-3">Image</th>
 
                       <TableHeading name="name" sort_field={queryParams.sort_field} sort_direction={queryParams.sort_direction} sortChanged={sortChanged}>
-                      Name
+                      Project Name
                      </TableHeading>
 
                      <TableHeading name="status" sort_field={queryParams.sort_field} sort_direction={queryParams.sort_direction} sortChanged={sortChanged}>
